@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HP CLAC</title>
+    <style>
+       /*Calculator Body*/
+.calc-body {
+    width: 275px;
+    margin: auto;
+    min-height: 400px;
+    box-shadow: 0 8px 50px -7px rgb(0, 0, 0);
+    background: #01c9b83f;
+}
+/*Calculator Display Screen*/
+.calc-screen {
+    padding: 1rem;
+}
+#calc-operation {
+    font-size: 1.3rem;
+    text-align: right;
+    color: #98a1ac;
+    padding-bottom: .5rem;
+}
+#calc-typed {
+    font-size: 2rem;
+    text-align: right;
+    color: #fff;
+}
+/*Calculator Buttons*/
+.calc-button-row{
+    display: table;
+}
+.calc-button-row button {
+    display: table-cell;
+    width: 25%;
+    background: #c93333;
+    color: #fff;
+    height: 65px;
+    font-size: 1.3rem;
+    border: none;
+    border-color:#54573c;
+    border-width: 1px 1px 0px 0;
+    border-style: solid;
+}
+.calc-button-row button.ac {
+    color: #ff7665;
+}
+.calc-button-row button.opt {
+    color: #ffbc56;
+}
+/*The border has been managed in every fourth button so that the design will not distract.*/
+.calc-button-row button:nth-child(4n){
+    border-right: none;
+}
+.calc-button-row button:active {
+    position: relative;
+    top: 1px;
+}
+.calc-button-row button:hover {
+    background: #860153;
+}
+ 
+    </style>
+</head>
+<body>
+ <!-- Calculator Body -->
+<div class="calc-body">
+
+    <!-- Calculator Display Screen -->
+    <div class="calc-screen">
+        <div id="calc-operation">0</div>
+        
+    </div>
+    
+    <!-- Calculator Buttons -->
+    <div class="center">
+    <div class="calc-button-row">
+        <button class="ac">AC</button>
+        <button class="opt">&#43;&#47;&#8722;</button>
+        <button class="opt">&#37;</button>
+        <button class="opt">&#247;</button>
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button class="opt">&#215;</button>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button class="opt">&#8722;</button>
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button class="opt">&#43;</button>
+        <button>0</button>
+        <button>.</button>
+        <button>DEL</button>
+        <button class="opt">&#61;</button>
+    </div>
+    </div>
+    <script>
+        function addToDisplay(value){
+            document.getElementById('dsplay').value += value;
+
+        }
+
+        function clearDisplay(){
+            document.getElementById('display').value='';
+
+        }
+
+        function calculateResult(){
+            try {
+                const result = eval(document.getElementById)('display').value
+                document.getElementById('display').value =results;
+            } catch (error) {
+                document.getElementById('display').value = 'Error';
+            }
+
+        }
+    </script>   
+</body>
+</html>
